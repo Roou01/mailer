@@ -1,0 +1,309 @@
+@include lg {
+  .analisys-section-mobile {
+    display: none;
+  }
+
+  .analisys-section-desktop {
+    text-align: center;
+    @include flexColumn;
+    width: 100%;
+    max-width: 1300px;
+    position: relative;
+    margin-bottom: 16rem;
+
+    @include small-laptop {
+      margin-bottom: 10rem;
+    }
+
+    &_circle-contaniner {
+      .circle1,
+      .circle2,
+      .circle3 {
+        background-color: $tertiary-color-transparent;
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      .circle1 {
+        width: 11rem;
+        height: 11rem;
+        bottom: 60px;
+        right: 90px;
+      }
+
+      .circle2 {
+        width: 6.4rem;
+        height: 6.4rem;
+        bottom: 160px;
+        right: 220px;
+      }
+
+      .circle3 {
+        width: 4.7rem;
+        height: 4.7rem;
+        bottom: 50px;
+        right: 200px;
+      }
+    }
+
+    &_text {
+      width: 67%;
+      .main-paragraph {
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin: 3.3rem 0 3rem 0;
+
+        @include xl {
+          font-size: 2rem;
+        }
+      }
+
+      &-wraper {
+        @include flexColumn;
+
+        .row1 {
+          @include flexRow;
+          margin-bottom: 4rem;
+
+          @include small-laptop {
+            margin-bottom: 2rem;
+          }
+
+          &-par {
+            @include flexRow;
+            justify-content: center;
+            width: 40rem;
+            height: 17rem;
+            background-color: $secondary-color-transparent;
+            border-radius: 25px;
+            box-shadow: 0 4px 4px $shadow-color;
+            font-size: 1.8rem;
+
+            @include xl {
+              font-size: 1.4rem;
+              width: 34rem;
+              height: 15rem;
+            }
+
+            @include small-laptop {
+              width: 28rem;
+              height: 15rem;
+            }
+
+            &:not(:last-child) {
+              margin-right: 4rem;
+
+              @include small-laptop {
+                margin-right: 2rem;
+              }
+            }
+          }
+        }
+
+        .row2 {
+          @include flexRow;
+          justify-content: center;
+          width: 62rem;
+          height: 17rem;
+          background-color: $secondary-color-transparent;
+          border-radius: 25px;
+          box-shadow: 0 4px 4px $shadow-color;
+
+          @include xl {
+            font-size: 1.8rem;
+            width: 52rem;
+            height: 15rem;
+          }
+
+          @include small-laptop {
+            width: 40rem;
+          }
+
+          &-par {
+            font-size: 2.2rem;
+            font-weight: 600;
+
+            @include small-laptop {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    &_table {
+      position: relative;
+
+      p {
+        margin: 7rem 0 4rem 0;
+        font-size: 2.2rem;
+        font-weight: 600;
+        position: relative;
+      }
+      .arrow2 {
+        position: absolute;
+        right: 22%;
+        bottom: -25%;
+        width: 5rem;
+        height: 6rem;
+        background-repeat: no-repeat;
+        background-image: url(../media/illustrations/Arrow2.svg);
+      }
+    }
+  }
+}
+
+.animation-analisys {
+  animation: anim 4s linear 0.5s infinite;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0rem);
+  }
+  5% {
+    transform: translateY(0.5rem);
+  }
+
+  10% {
+    transform: translateY(0rem);
+  }
+
+  15% {
+    transform: translateY(0.5rem);
+  }
+
+  20% {
+    transform: translateY(0rem);
+  }
+
+  65% {
+    transform: translateY(0rem);
+  }
+
+  70% {
+    transform: translateY(0.5rem);
+  }
+
+  75% {
+    transform: translateY(0rem);
+  }
+
+  80% {
+    transform: translateY(0.5rem);
+  }
+
+  85% {
+    transform: translateY(0rem);
+  }
+
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@include xs {
+  .analisys-section-desktop {
+    display: none;
+  }
+
+  .analisys-section-mobile {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 4rem;
+
+      .main-paragraph {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+
+        @include ipad {
+          margin-top: 3rem;
+          font-size: 2.4rem;
+        }
+      }
+
+      &-wraper {
+        position: relative;
+
+        .row1 {
+          margin-bottom: 2rem;
+          ul {
+            position: relative;
+            left: 6%;
+            font-size: 1.5rem;
+            color: $bullet-color;
+
+            @include ipad {
+              font-size: 1.8rem;
+              line-height: 1.7;
+            }
+
+            li {
+              &:not(:last-child) {
+                margin-bottom: 1rem;
+
+                @include ipad {
+                  margin-bottom: 3rem;
+                }
+              }
+              span {
+                color: $text-color;
+              }
+            }
+          }
+        }
+
+        .row2 {
+          text-align: center;
+          &-par {
+            font-size: 1.5rem;
+            font-weight: 600;
+
+            @include ipad {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    &_table {
+      position: relative;
+      text-align: center;
+      margin: 2.5rem 0 3rem 0;
+      p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        @include ipad {
+          font-size: 2rem;
+        }
+      }
+      .arrow2 {
+        transform: rotate(-30deg);
+        position: absolute;
+        right: -1rem;
+        top: 4rem;
+        width: 2rem;
+        height: 3rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../media/illustrations/Arrow2.svg);
+
+        @include ipad {
+          width: 5rem;
+          height: 7rem;
+          right: -5rem;
+        }
+      }
+    }
+  }
+}

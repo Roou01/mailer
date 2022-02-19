@@ -1,0 +1,32 @@
+//-----FOTNS-----
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+//-----ABSTRACTS-----
+@import "abstracts/breakpoints";
+@import "abstracts/classes";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/buttons";
+
+//-----BASE-----
+@import "base/resets";
+
+//-----FORMS-----
+@import "forms/backdrop";
+@import "forms/consalt-form";
+@import "forms/table";
+@import "forms/send-data-form";
+@import "forms/call-back-form";
+@import "forms/success-popup";
+
+//-----LAYOUT-----
+@import "layout/header";
+@import "layout/main-section";
+@import "layout/get-section";
+@import "layout/analisys-section";
+@import "layout/order-section";
+@import "layout/about-section";
+@import "layout/feedback-section";
+@import "layout/question-section";
+@import "layout/footer";

@@ -1,0 +1,278 @@
+@include lg {
+  .question-section {
+    @include flexColumn;
+    width: 100%;
+    background: $tertiary-gradient;
+    position: relative;
+    padding-bottom: 6rem;
+
+    .mainsection-mobile_forwho {
+      display: none;
+    }
+
+    &_circle-container {
+      .circle1,
+      .circle2,
+      .circle3 {
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      .circle1 {
+        width: 11rem;
+        height: 11rem;
+        background-color: $tertiary-color-transparent;
+        left: 80px;
+        top: 20px;
+      }
+
+      .circle2 {
+        width: 6.4rem;
+        height: 6.4rem;
+        background-color: $tertiary-color-transparent;
+        top: 10px;
+        left: -20px;
+      }
+
+      .circle3 {
+        width: 4.7rem;
+        height: 4.7rem;
+        background-color: transparent;
+        border: solid 3px $tertiary-color-transparent;
+        top: 160px;
+        left: 20px;
+      }
+    }
+
+    .question-header {
+      width: 100%;
+      margin-bottom: 6rem;
+    }
+    &_form-mobile {
+      display: none;
+    }
+    &_form-desktop {
+      position: relative;
+      width: 67rem;
+      height: 65rem;
+      @include flexColumn;
+      background-color: $form-background-color;
+      border-radius: 20px;
+      margin-bottom: 10rem;
+      box-shadow: 0 4px 4px $shadow-color;
+      padding: 4rem 0;
+
+      &-img1,
+      &-img2 {
+        position: absolute;
+        background-repeat: no-repeat;
+      }
+
+      &-img1 {
+        width: 12rem;
+        height: 26rem;
+        top: -62px;
+        left: 7px;
+        background-image: url(../media/illustrations/question1.svg);
+        background-size: 95%;
+      }
+
+      &-img2 {
+        width: 10rem;
+        height: 20rem;
+        background-image: url(../media/illustrations/question2.svg);
+        background-size: cover;
+        right: 7px;
+        bottom: 7px;
+      }
+
+      input,
+      textarea {
+        background-color: $form-input-color;
+        padding: 2rem 1rem;
+        border-radius: 10px;
+        border: solid 2px $form-input-color;
+        width: 75%;
+        transition: border 0.4s;
+        font-family: inherit;
+
+        &:focus {
+          outline: none;
+          border: solid 2px $main-color;
+        }
+      }
+      input {
+        margin-bottom: 2rem;
+      }
+      textarea {
+        resize: none;
+        margin-bottom: 4rem;
+      }
+
+      .mainsection-mobile_button {
+        display: none;
+      }
+
+      &-agreement {
+        margin-top: 1.6rem;
+        display: flex;
+        align-items: center;
+        input {
+          margin: 0;
+          width: 1.4rem;
+          height: 1.4rem;
+          margin-right: 1rem;
+        }
+        label {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  .question-section {
+    @include flexColumn;
+    width: 100%;
+    background: $tertiary-gradient;
+    position: relative;
+    padding-bottom: 5rem;
+
+    @include ipad {
+      padding-bottom: 9rem;
+    }
+
+    .get-section_header {
+      display: none;
+    }
+
+    &_circle-container {
+      display: none;
+    }
+
+    .question-margin {
+      margin: 0 0 4rem 0;
+    }
+
+    .question-header {
+      width: 100%;
+      margin-bottom: 6rem;
+    }
+    &_form-desktop {
+      display: none;
+    }
+    &_form-mobile {
+      position: relative;
+      width: 85%;
+      @include flexColumn;
+      background-color: $form-background-color;
+      border-radius: 20px;
+      box-shadow: 0 4px 4px $shadow-color;
+      padding: 4rem 0;
+
+      @include ipad {
+        margin-top: 5rem;
+      }
+
+      &-img1,
+      &-img2 {
+        position: absolute;
+        background-repeat: no-repeat;
+      }
+
+      &-img1 {
+        width: 4.3rem;
+        height: 10rem;
+        top: -64px;
+        left: 15px;
+        background-image: url(../media/illustrations/question1.svg);
+        background-size: cover;
+
+        @include ipad {
+          width: 8.3rem;
+          height: 20rem;
+        }
+      }
+
+      &-img2 {
+        width: 3.5rem;
+        height: 7rem;
+        background-image: url(../media/illustrations/question2.svg);
+        background-size: cover;
+        right: 7px;
+        bottom: 7px;
+
+        @include ipad {
+          width: 8rem;
+          height: 17rem;
+        }
+      }
+
+      input,
+      textarea {
+        background-color: $form-input-color;
+        padding: 1.5rem 1rem;
+        border-radius: 10px;
+        border: solid 2px $form-input-color;
+        width: 85%;
+        transition: border 0.4s;
+        font-family: inherit;
+
+        @include ipad {
+          width: 75%;
+        }
+
+        &:focus {
+          outline: none;
+          border: solid 2px $main-color;
+        }
+      }
+      input {
+        margin-bottom: 2rem;
+      }
+      textarea {
+        resize: none;
+        margin-bottom: 2rem;
+      }
+
+      .main-section_button {
+        display: none;
+      }
+
+      .question-form {
+        transform: scale(0.9);
+      }
+
+      &-agreement {
+        position: relative;
+        margin-top: 1.6rem;
+        display: flex;
+        align-items: center;
+
+        @include breakpoint(368px) {
+          margin: 1.6rem 0 0 3.5rem;
+          align-self: start;
+        }
+
+        input {
+          margin: 0;
+          width: 1.4rem;
+          height: 1.4rem;
+          margin-right: 1rem;
+        }
+        label {
+          font-size: 1.2rem;
+
+          @include breakpoint(368px) {
+            font-size: 1rem;
+          }
+
+          @include ipad {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}

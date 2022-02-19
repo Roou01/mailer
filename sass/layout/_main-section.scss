@@ -1,0 +1,860 @@
+@include lg {
+  .mainsection-mobile {
+    display: none;
+  }
+  .main-section {
+    width: 100%;
+    background: $prime-gradient;
+    @include flexColumn;
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 6rem;
+
+    &_circle-container {
+      .circle1,
+      .circle2,
+      .circle3,
+      .circle4,
+      .circle5 {
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .circle1 {
+        width: 11rem;
+        height: 11rem;
+        background-color: $tertiary-color;
+        left: 80px;
+        top: 20px;
+      }
+
+      .circle2 {
+        width: 6.4rem;
+        height: 6.4rem;
+        background-color: $tertiary-color;
+        top: 10px;
+        left: -20px;
+      }
+
+      .circle3 {
+        width: 4.7rem;
+        height: 4.7rem;
+        background-color: transparent;
+        border: solid 3px $tertiary-color;
+        top: 160px;
+        left: 20px;
+      }
+
+      .circle4 {
+        width: 8.5rem;
+        height: 8.5rem;
+        background-color: $tertiary-color-transparent;
+        bottom: 10px;
+        right: 20px;
+      }
+
+      .circle5 {
+        width: 11rem;
+        height: 11rem;
+        background-color: transparent;
+        border: solid 5px $tertiary-color-transparent;
+        bottom: 120px;
+        right: -60px;
+      }
+    }
+
+    &_info {
+      width: 67%;
+      max-width: 1300px;
+      display: flex;
+      position: relative;
+      margin-bottom: 3rem;
+
+      @include hd {
+        width: 80%;
+      }
+
+      @include xxl {
+        width: 95%;
+        justify-content: space-between;
+      }
+
+      @include xl {
+        width: 90%;
+        justify-content: space-between;
+      }
+
+      @include small-laptop {
+        justify-content: center;
+      }
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 5.3rem;
+        margin-right: 8.4rem;
+
+        @include xl {
+          padding-top: 4rem;
+          margin-right: 2.5rem;
+        }
+
+        @include small-laptop {
+          padding-top: 1rem;
+          margin-right: 0;
+        }
+
+        .header {
+          margin-bottom: 3.1rem;
+          h1 {
+            font-size: 5.7rem;
+            margin: 0;
+            font-family: $pt-font;
+
+            span {
+              color: $main-color;
+            }
+
+            @include xl {
+              font-size: 5rem;
+            }
+
+            @include breakpoint(1370px) {
+              font-size: 4rem;
+              line-height: 1.1;
+            }
+
+            @include small-laptop {
+              font-size: 4rem;
+            }
+          }
+
+          h2 {
+            margin-top: 1rem;
+            font-size: 3.3rem;
+            font-weight: 400;
+
+            @include small-laptop {
+              font-size: 2.5rem;
+              margin-top: 0.5rem;
+            }
+
+            @include breakpoint(1370px) {
+              margin: 0.4rem 0 0 0;
+            }
+          }
+        }
+
+        .text-holder {
+          @include flexStart;
+
+          &_1,
+          &_2 {
+            P {
+              font-size: 2rem;
+              font-weight: 600;
+              margin: 1.5rem 0;
+
+              @include xl {
+                font-size: 1.6rem;
+              }
+
+              @include small-laptop {
+                font-size: 1.4rem;
+                font-weight: 700;
+              }
+            }
+
+            ul {
+              font-size: 1.8rem;
+              font-weight: 400;
+              padding-left: 2rem;
+              line-height: 1;
+              color: $bullet-color;
+
+              @include breakpoint(1370px) {
+                margin: 0;
+                line-height: 0.8;
+                font-size: 1rem;
+              }
+
+              @include xl {
+                font-size: 1.5rem;
+              }
+
+              @include small-laptop {
+                font-size: 1.3rem;
+              }
+
+              li {
+                &:not(:last-child) {
+                  margin-bottom: 2rem;
+                }
+
+                @include breakpoint(1370px) {
+                  margin: 0;
+                  line-height: 1;
+                }
+              }
+
+              span {
+                color: $text-color;
+              }
+            }
+          }
+
+          &_1 {
+            margin-right: 3.3rem;
+
+            @include xl {
+              margin-right: 4.3rem;
+
+              @include small-laptop {
+                margin-right: 1rem;
+                width: 25rem;
+              }
+            }
+
+            .text-img1 {
+              width: 100%;
+              height: 15rem;
+              background-image: url(../media/illustrations/Vector1.svg);
+              background-repeat: no-repeat;
+
+              @include xl {
+                height: 15rem;
+              }
+
+              @include small-laptop {
+                height: 14rem;
+                width: 20rem;
+                background-size: cover;
+              }
+            }
+          }
+
+          &_2 {
+            @include small-laptop {
+              padding-top: 3rem;
+            }
+            .text-img2 {
+              width: 100%;
+              height: 15rem;
+              background-image: url(../media/illustrations/Vector2.svg);
+              background-repeat: no-repeat;
+
+              @include small-laptop {
+                height: 13rem;
+                width: 17rem;
+                background-size: cover;
+              }
+            }
+          }
+        }
+      }
+
+      &-photo {
+        position: relative;
+        @include flexColumn;
+        text-align: center;
+
+        .img-main {
+          position: relative;
+          img {
+            width: 85%;
+            object-fit: cover;
+
+            @include xl {
+              width: 80%;
+            }
+
+            @include breakpoint(1370px) {
+              width: 75%;
+            }
+          }
+        }
+
+        .text {
+          position: absolute;
+          bottom: 0;
+          text-align: center;
+
+          h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0;
+          }
+
+          p {
+            font-size: 1.6rem;
+            margin-top: 1rem;
+
+            @include xl {
+              font-size: 1.5rem;
+            }
+
+            @include breakpoint(1370px) {
+              font-size: 1.2rem;
+            }
+
+            @include small-laptop {
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .bottom-btn {
+      padding: 0 0 2rem 0;
+    }
+
+    &_button {
+      @include flexRow;
+      p {
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+
+        @include small-laptop {
+          font-size: 1.8rem;
+          margin-right: 1rem;
+        }
+      }
+
+      button {
+        height: 100%;
+        position: relative;
+        margin-left: 5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:focus,
+        &:active {
+          outline: none;
+        }
+
+        &:active > .circle {
+          transform: translateY(4px);
+          background-image: $active-button-gradient;
+          outline: none;
+        }
+
+        &:hover > .circle {
+          background-image: $hover-button-gradient;
+        }
+
+        .circle {
+          width: 10rem;
+          height: 10rem;
+          border: solid 2px #f7f7f7;
+          border-radius: 50%;
+          background-image: $main-button-gradient;
+          box-shadow: 0 4px 5px #404040b0;
+          transition: all 0.3s;
+
+          &:focus {
+            outline: none;
+          }
+
+          @include small-laptop {
+            width: 8rem;
+            height: 8rem;
+          }
+        }
+
+        .arrow {
+          width: 10rem;
+          height: 3rem;
+          background-image: url(../media/illustrations/Arrow1.svg);
+          background-repeat: no-repeat;
+          background-size: 99%;
+          position: absolute;
+          top: 40%;
+          transform: translate(-45%);
+          z-index: 1;
+
+          @include small-laptop {
+            transform: translate(-55%);
+            top: 36%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  .mainsection-desktop {
+    display: none;
+    visibility: hidden;
+  }
+  .mainsection-mobile {
+    width: 100%;
+    background: $prime-gradient;
+    @include flexColumn;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0 0 3rem 0;
+
+    @include ipad {
+      margin-bottom: 10rem;
+    }
+
+    &_info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+
+      &-text {
+        .header {
+          margin-bottom: 2rem;
+          h1 {
+            font-size: 2.8rem;
+            text-align: center;
+            font-weight: 800;
+            font-family: $pt-font;
+
+            @include breakpoint2(550px) {
+              font-size: 4rem;
+            }
+            span {
+              color: $main-color;
+            }
+          }
+
+          h2 {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 400;
+
+            @include breakpoint2(550px) {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+
+      &-photo {
+        position: relative;
+        @include flexColumn;
+
+        @include breakpoint2(550px) {
+          margin-bottom: 3rem;
+        }
+
+        .img-main {
+          @include flexColumn;
+          width: 100%;
+
+          img {
+            width: 60%;
+
+            @include breakpoint2(550px) {
+              width: 80%;
+            }
+
+            @include ipad {
+              width: 90%;
+            }
+          }
+        }
+
+        .text {
+          position: absolute;
+          bottom: 0;
+          h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            @include breakpoint2(550px) {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .forwho-margin {
+      @include ipad {
+        margin: 5rem 0 3rem 0;
+      }
+    }
+
+    &_forwho {
+      text-align: center;
+      margin-top: 5.4rem;
+      font-size: 2rem;
+      font-family: $pt-font;
+      font-weight: 700;
+      line-height: 1;
+      position: relative;
+      margin-bottom: 1.5rem;
+
+      @include ipad {
+        margin-top: 0;
+        font-size: 3rem;
+        color: $text-color;
+      }
+
+      h2 {
+        position: relative;
+        z-index: 1;
+        span {
+          font-weight: 400;
+        }
+      }
+
+      &-circles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .circle1,
+        .circle2 {
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+        }
+
+        .circle1 {
+          left: 50%;
+          transform: translate(-85%, -50%);
+          width: 5rem;
+          height: 5rem;
+          background-color: $tertiary-color;
+
+          @include ipad {
+            width: 8rem;
+            height: 8rem;
+          }
+        }
+
+        .circle2 {
+          right: 50%;
+          transform: translate(85%, -50%);
+          width: 7rem;
+          height: 7rem;
+          border: solid 3px $tertiary-color;
+
+          @include ipad {
+            width: 10rem;
+            height: 10rem;
+          }
+        }
+      }
+    }
+
+    .text-holder {
+      position: relative;
+      width: 80%;
+
+      @include breakpoint2(550px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      &_1 {
+        .text-img1 {
+          margin: 1.5rem auto 0 auto;
+          width: 17rem;
+          height: 12rem;
+          background-image: url(../media/illustrations/Vector1.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          @include ipad {
+            width: 30rem;
+            height: 22rem;
+          }
+        }
+
+        p {
+          margin: 1.5rem 0;
+          font-size: 1.7rem;
+          font-weight: 600;
+
+          @include ipad {
+            font-size: 2.5rem;
+          }
+        }
+
+        ul {
+          @include breakpoint2(550px) {
+            list-style: none;
+            left: 0;
+          }
+          position: relative;
+          left: 2rem;
+          color: $bullet-color;
+          font-size: 1.5rem;
+
+          @include ipad {
+            font-size: 2rem;
+            margin-bottom: 4rem;
+          }
+
+          li {
+            margin-bottom: 0.8rem;
+
+            @include ipad {
+              font-size: 2rem;
+              margin-bottom: 2rem;
+            }
+            span {
+              color: $text-color;
+            }
+          }
+        }
+      }
+
+      &_2 {
+        .text-img2 {
+          margin: 1.5rem auto 0 auto;
+          width: 17rem;
+          height: 13rem;
+          background-image: url(../media/illustrations/Vector2.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          @include ipad {
+            width: 28.5rem;
+            height: 22rem;
+          }
+        }
+
+        p {
+          margin: 1.5rem 0;
+          font-size: 1.7rem;
+          font-weight: 600;
+
+          @include ipad {
+            font-size: 2.5rem;
+          }
+        }
+
+        ul {
+          @include breakpoint2(550px) {
+            list-style: none;
+            left: 0;
+          }
+
+          @include ipad {
+            font-size: 2rem;
+            margin-bottom: 4rem;
+          }
+
+          position: relative;
+          left: 2rem;
+          color: $bullet-color;
+          font-size: 1.5rem;
+
+          li {
+            margin-bottom: 0.8rem;
+
+            @include ipad {
+              font-size: 2rem;
+              margin-bottom: 2rem;
+            }
+            span {
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
+
+    &_circle-container {
+      .circle1,
+      .circle2,
+      .circle3,
+      .circle4,
+      .circle5 {
+        position: absolute;
+        border-radius: 50%;
+        z-index: 0;
+      }
+
+      .circle1 {
+        width: 5rem;
+        height: 5rem;
+        background-color: $tertiary-color;
+        left: 40px;
+        top: 180px;
+      }
+
+      .circle2 {
+        width: 6.4rem;
+        height: 6.4rem;
+        background-color: $tertiary-color;
+        top: 120px;
+        left: -20px;
+      }
+
+      .circle3 {
+        width: 4.7rem;
+        height: 4.7rem;
+        background-color: transparent;
+        border: solid 3px $tertiary-color;
+        top: 110px;
+        left: 60px;
+      }
+
+      .circle4 {
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: $tertiary-color-transparent;
+        top: 510px;
+        right: 20px;
+      }
+
+      .circle5 {
+        width: 10rem;
+        height: 10rem;
+        background-color: transparent;
+        border: solid 5px $tertiary-color-transparent;
+        top: 420px;
+        right: -60px;
+      }
+    }
+
+    .bottom-btn {
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+
+    .consultaion-form {
+      outline: none;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+
+    &_button {
+      position: relative;
+      height: 10rem;
+      @include flexRow;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+
+      .main-btn-par {
+        font-size: 6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+        text-align: center;
+
+        @include small-laptop {
+          font-size: 1.8rem;
+          margin-right: 1rem;
+        }
+
+        @include ipad {
+          font-size: 3rem;
+        }
+      }
+
+      button {
+        position: relative;
+        margin-left: 5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+        outline: none;
+        padding: 5px;
+
+        &:focus,
+        &:active {
+          outline: none;
+        }
+
+        &:active > .circle {
+          transform: translateY(4px);
+          background-image: $active-button-gradient;
+          outline: none;
+        }
+
+        &:hover > .circle {
+          background-image: $hover-button-gradient;
+          outline: none;
+        }
+
+        .circle {
+          width: 10rem;
+          height: 10rem;
+          border: solid 2px #f7f7f7;
+          border-radius: 50%;
+          background-image: $main-button-gradient;
+          box-shadow: 0 2px 5px #404040b0;
+          transition: all 0.3s;
+          outline: none;
+
+          &:focus,
+          &:active {
+            outline: none;
+          }
+
+          @include small-laptop {
+            width: 8rem;
+            height: 8rem;
+          }
+
+          @include ipad {
+            width: 10rem;
+            height: 10rem;
+          }
+        }
+
+        .arrow {
+          width: 10rem;
+          height: 3rem;
+          background-image: url(../media/illustrations/Arrow1.svg);
+          background-repeat: no-repeat;
+          background-size: 99%;
+          position: absolute;
+          top: 40%;
+          transform: translate(-45%);
+          z-index: 1;
+          outline: none;
+
+          &:focus,
+          &:active {
+            outline: none;
+          }
+
+          @include small-laptop {
+            transform: translate(-55%);
+            top: 36%;
+          }
+
+          @include ipad {
+            top: 40%;
+            transform: translate(-45%);
+          }
+        }
+      }
+    }
+  }
+}

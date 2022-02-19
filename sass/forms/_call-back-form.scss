@@ -1,0 +1,126 @@
+@include lg {
+  .callback-mobile {
+    display: none;
+  }
+
+  .callback-desktop {
+    @include flexColumn;
+    width: 44rem;
+    position: fixed;
+    bottom: 250px;
+    right: 240px;
+    z-index: 99;
+    background-color: $form-background-color;
+    border-radius: 30px;
+    padding: 6rem 0;
+
+    @include xxl {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 6rem 0;
+      height: 50rem;
+    }
+
+    .callback-close-btn {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background-size: cover;
+      background-position: center;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+    }
+
+    input {
+      width: 85%;
+      background-color: $form-input-color;
+      padding: 2.2rem 0 2.2rem 3rem;
+      border: solid 2px $form-background-color;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      transition: all 0.3s;
+      font-size: 1.8rem;
+
+      &:nth-of-type(2) {
+        margin-bottom: 3rem;
+      }
+
+      &:focus {
+        outline: none;
+        border: solid 2px $main-color;
+      }
+    }
+  }
+}
+
+.invisible {
+  display: none;
+  visibility: hidden;
+}
+
+@include xs {
+  .callback-desktop {
+    display: none;
+  }
+
+  .callback-mobile {
+    @include flexColumn;
+    width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    background-color: $form-background-color;
+    border-radius: 30px;
+    padding: 4rem 0;
+    transform: translate(-50%, -50%);
+
+    @include ipad {
+      width: 60%;
+      padding: 6rem 0;
+    }
+
+    .callback-close-btn {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background-size: cover;
+      background-position: center;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+
+      @include ipad {
+        font-size: 3rem;
+      }
+    }
+
+    input {
+      width: 85%;
+      background-color: $form-input-color;
+      padding: 2.2rem 0 2.2rem 3rem;
+      border: solid 2px $form-background-color;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      transition: all 0.3s;
+      font-size: 1.8rem;
+
+      &:nth-of-type(2) {
+        margin-bottom: 3rem;
+      }
+
+      &:focus {
+        outline: none;
+        border: solid 2px $main-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColumnStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+@mixin flexRow {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexRowCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexStart {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin analisysAnimanion {
+  @keyframes anim {
+    50% {
+      transform: translateY(6rem);
+    }
+
+    100% {
+      transform: translateY(0rem);
+    }
+  }
+}

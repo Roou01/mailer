@@ -1,0 +1,158 @@
+@include lg {
+  .order-section {
+    @include flexColumn;
+    width: 100%;
+    background: $secondary-gradient;
+    position: relative;
+    padding: 4.5rem 0 6rem 0;
+
+    .mainsection-mobile_forwho {
+      display: none;
+    }
+
+    .mainsection-mobile_button {
+      display: none;
+    }
+
+    .get-section_header {
+      margin-top: 0;
+    }
+
+    &_steps {
+      width: 67%;
+      max-width: 1300px;
+      @include flexRow;
+      justify-content: center;
+      margin: 4.3rem 0 3rem 0;
+
+      @include hd {
+        width: 80%;
+      }
+
+      @include xl {
+        width: 90%;
+      }
+
+      &-img {
+        margin-right: 10rem;
+        width: 53rem;
+        height: 57.3rem;
+        background-image: url(../media/illustrations/order1.svg);
+        background-size: cover;
+
+        @include xl {
+          width: 49rem;
+          height: 53rem;
+        }
+
+        @include small-laptop {
+          width: 38rem;
+          height: 41rem;
+          margin-right: 0;
+        }
+      }
+
+      &-text {
+        .text-wraper {
+          display: flex;
+          align-items: center;
+
+          h3 {
+            display: inline-block;
+            font-family: $pt-font;
+            font-weight: 700;
+            font-size: 9.6rem;
+            margin-right: 1.5rem;
+            color: $main-color-transparent;
+
+            @include small-laptop {
+              font-size: 7rem;
+            }
+          }
+
+          p {
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 600;
+            color: $text-color;
+            line-height: 1;
+
+            @include small-laptop {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  .order-section {
+    @include flexColumn;
+    width: 100%;
+    background: $secondary-gradient;
+    position: relative;
+    margin-top: 5rem;
+    padding-bottom: 3rem;
+
+    @include ipad {
+      padding: 10rem 0;
+    }
+
+    .get-section_header {
+      display: none;
+    }
+
+    .main-section_button {
+      display: none;
+    }
+
+    &_steps {
+      width: 90%;
+      max-width: 1300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 4.3rem 0 3rem 0;
+
+      &-img {
+        width: 16rem;
+        height: 17.5rem;
+        background-image: url(../media/illustrations/order1.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include ipad {
+          width: 26rem;
+          height: 27.5rem;
+        }
+      }
+
+      &-text {
+        .text-wraper {
+          width: 90%;
+          margin: auto;
+          display: flex;
+          align-items: center;
+
+          h3 {
+            display: inline-block;
+            font-family: $pt-font;
+            font-weight: 700;
+            font-size: 6.4rem;
+            margin-right: 1.5rem;
+            color: $main-color-transparent;
+          }
+
+          p {
+            display: inline-block;
+            font-size: 1.7rem;
+
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+}

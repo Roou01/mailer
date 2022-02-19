@@ -1,0 +1,344 @@
+@include lg {
+  .get-section {
+    width: 100%;
+    height: 122rem;
+    background-image: url(../media/illustrations/Line1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flexStart;
+    flex-direction: column;
+    margin-bottom: 14rem;
+
+    &_img {
+      display: none;
+    }
+
+    @include xl {
+      height: 90rem;
+      margin-bottom: 10rem;
+    }
+
+    @include small-laptop {
+      height: 80rem;
+    }
+
+    .header-margin {
+      margin-top: 10rem;
+    }
+
+    .mainsection-mobile_forwho {
+      display: none;
+    }
+
+    &_header {
+      position: relative;
+      height: 10.3rem;
+      width: 45rem;
+
+      h2 {
+        text-align: center;
+        width: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4.5rem;
+        font-family: $pt-font;
+        font-weight: 700;
+        margin: 0;
+        z-index: 2;
+
+        @include xl {
+          font-size: 4rem;
+        }
+
+        @include small-laptop {
+          font-size: 3.5rem;
+        }
+      }
+
+      &-circles {
+        height: 10.3rem;
+        width: 28rem;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .circle1,
+        .circle2 {
+          position: absolute;
+        }
+
+        .circle1 {
+          top: 10%;
+          left: 25%;
+          width: 8.5rem;
+          height: 8.5rem;
+          border-radius: 50%;
+          background-color: $tertiary-color-transparent;
+        }
+
+        .circle2 {
+          top: 0;
+          left: 45%;
+          width: 10.3rem;
+          height: 10.3rem;
+          border-radius: 50%;
+          border: solid 5px $tertiary-color-transparent;
+        }
+      }
+    }
+
+    .mainsection-mobile_button {
+      display: none;
+    }
+
+    .get-section_mobile {
+      display: none;
+    }
+
+    &_text {
+      width: 67%;
+      max-width: 1300px;
+      margin-bottom: 3rem;
+
+      @include hd {
+        width: 80%;
+      }
+
+      @include xxl {
+        width: 95%;
+      }
+
+      @include xl {
+        width: 90%;
+      }
+
+      .point {
+        display: flex;
+        align-items: center;
+        &:nth-last-of-type(odd) {
+          justify-content: flex-end;
+        }
+
+        .img1 {
+          width: 24rem;
+          height: 21.3rem;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(../media/illustrations/get1.svg);
+          margin-right: 4rem;
+
+          @include xl {
+            width: 18rem;
+            height: 16rem;
+            margin-right: 2rem;
+          }
+        }
+        .img2 {
+          width: 24.5rem;
+          height: 19rem;
+          background-repeat: no-repeat;
+          background-image: url(../media/illustrations/get2.svg);
+          margin-left: 4rem;
+          background-size: cover;
+
+          @include xl {
+            width: 18rem;
+            height: 14rem;
+            margin-left: 2rem;
+          }
+        }
+        .img3 {
+          width: 24rem;
+          height: 23rem;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(../media/illustrations/get3.svg);
+          margin-right: 4rem;
+
+          @include xl {
+            width: 18rem;
+            height: 17rem;
+            margin-right: 2rem;
+          }
+        }
+        .img4 {
+          width: 24rem;
+          height: 20rem;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(../media/illustrations/get4.svg);
+          margin-left: 4rem;
+
+          @include xl {
+            width: 18rem;
+            height: 15rem;
+            margin-left: 2rem;
+          }
+        }
+
+        p {
+          font-size: 2.2rem;
+          font-weight: 600;
+
+          @include xl {
+            font-size: 2rem;
+          }
+
+          &:nth-of-type(even) {
+            margin-left: 3rem;
+          }
+
+          &:nth-of-type(odd) {
+            margin-right: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  .get-section {
+    width: 100%;
+    height: 100rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flexStart;
+    flex-direction: column;
+    margin-bottom: 14rem;
+    position: relative;
+
+    @include breakpoint2(550px) {
+      height: 100%;
+    }
+
+    &_img {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 110%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .header-margin {
+      margin-top: 10rem;
+    }
+
+    &_header {
+      display: none;
+    }
+
+    .main-section_button-desktop {
+      display: none;
+    }
+
+    .get-section_desktop {
+      display: none;
+    }
+
+    &_text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      max-width: 1300px;
+      margin-bottom: 3rem;
+      text-align: center;
+      z-index: 2;
+
+      .point {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .img1,
+        .img2,
+        .img3,
+        .img4 {
+          margin-bottom: 1rem;
+
+          @include breakpoint2(550px) {
+            margin-bottom: 2rem;
+          }
+        }
+
+        .img1 {
+          margin-top: 3rem;
+          width: 18rem;
+          height: 16rem;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(../media/illustrations/get1.svg);
+
+          @include ipad {
+            margin-top: 10rem;
+            width: 30rem;
+            height: 27rem;
+          }
+        }
+        .img2 {
+          width: 18rem;
+          height: 14rem;
+          background-repeat: no-repeat;
+          background-image: url(../media/illustrations/get2.svg);
+          background-size: cover;
+
+          @include ipad {
+            width: 32rem;
+            height: 25rem;
+          }
+        }
+        .img3 {
+          width: 17rem;
+          height: 16rem;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(../media/illustrations/get3.svg);
+
+          @include ipad {
+            width: 32rem;
+            height: 30.5rem;
+          }
+        }
+        .img4 {
+          width: 20rem;
+          height: 16.5rem;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(../media/illustrations/get4.svg);
+
+          @include ipad {
+            width: 34rem;
+            height: 28rem;
+          }
+        }
+
+        p {
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin-bottom: 3rem;
+
+          @include ipad {
+            font-size: 2rem;
+
+            &:not(:last-child) {
+              margin-bottom: 10rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

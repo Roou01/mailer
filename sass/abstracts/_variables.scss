@@ -1,0 +1,54 @@
+//-----SOLID COLORS-----
+$main-color: #6358e1;
+$main-color-transparent: rgb(99, 88, 255, 30%);
+$secondary-color: #dadaff;
+$tertiary-color: #d8d8ff;
+$tertiary-color-transparent: rgb(242, 242, 255);
+$secondary-color-transparent: rgba(216, 216, 255, 50%);
+$text-color: #404040;
+$shadow-color: rgba(0, 0, 0, 0.281);
+$background-color: #f7f7ff;
+$form-background-color: #ffff;
+$form-input-color: rgba(216, 216, 255, 60%);
+$button-hover-color: rgba(85, 74, 215, 30%);
+$bullet-color: #a59ff5;
+
+//-----GRADIENTS-----
+$prime-gradient: linear-gradient(
+  to bottom,
+  $secondary-color,
+  $background-color 45%
+);
+
+$secondary-gradient: linear-gradient(
+  to right,
+  $secondary-color,
+  $background-color 65%
+);
+
+$tertiary-gradient: linear-gradient(
+  to top,
+  $secondary-color,
+  $background-color 45%
+);
+
+$main-button-gradient: linear-gradient(
+  to right bottom,
+  rgba(99, 88, 225) 40%,
+  rgba(85, 74, 215, 40%)
+);
+
+$hover-button-gradient: linear-gradient(
+  to right bottom,
+  rgb(129, 121, 233) 40%,
+  rgba(85, 74, 215, 40%)
+);
+
+$active-button-gradient: linear-gradient(
+  to right bottom,
+  rgb(42, 29, 203) 40%,
+  rgba(85, 74, 215, 40%)
+);
+
+//-----FONTS-----
+$pt-font: "PT Sans", sans-serif;

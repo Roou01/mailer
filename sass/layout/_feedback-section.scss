@@ -1,0 +1,218 @@
+@include lg {
+  .feedback-section {
+    @include flexColumn;
+    position: relative;
+    width: 100%;
+    margin: 10rem 0;
+
+    .mainsection-mobile_forwho {
+      display: none;
+    }
+
+    .swiper-container {
+      width: 55%;
+      max-width: 1300px;
+      margin: 6rem 0 4rem 0;
+      @include flexColumn;
+
+      @include hd {
+        width: 60%;
+      }
+
+      @include xxl {
+        width: 80%;
+      }
+
+      .mobile {
+        display: none;
+        visibility: hidden;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 600px;
+
+        @include xl {
+          height: 500px;
+        }
+
+        &-wrapper {
+          .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .swiper-slide {
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &_btn-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      position: relative;
+      left: 10px;
+
+      .prev-btn {
+        position: relative;
+        width: 8rem;
+        height: 5rem;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:nth-of-type(1) {
+          transform: scaleX(-1);
+        }
+
+        &:hover > .prev-btn_circle {
+          background: $hover-button-gradient;
+        }
+
+        &:active > .prev-btn_circle {
+          transform: scale(0.96);
+        }
+
+        &:nth-of-type(1) {
+          margin-right: 7rem;
+        }
+
+        &_circle {
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          background: $main-button-gradient;
+          box-shadow: 0 2px 2px $shadow-color;
+          transition: all 0.2s;
+        }
+
+        &_arrow {
+          position: absolute;
+          top: 2.1rem;
+          left: -2.3rem;
+          width: 5rem;
+          height: 1rem;
+          background-image: url(../media/illustrations/Arrowleft.svg);
+          background-image: 90%;
+          background-repeat: no-repeat;
+          background-position: right;
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  .feedback-section {
+    @include flexColumn;
+    position: relative;
+    width: 100%;
+    margin-bottom: 4rem;
+
+    .feedback-margin {
+      margin-top: 6rem;
+    }
+
+    .get-section_header {
+      display: none;
+    }
+
+    .swiper-container {
+      width: 80%;
+      max-width: 1300px;
+      margin: 3rem 0 2rem 0;
+      @include flexColumn;
+
+      @include ipad {
+        margin: 6rem 0 4rem 0;
+      }
+
+      .desktop {
+        display: none;
+        visibility: hidden;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 500px;
+
+        @include ipad {
+          height: 700px;
+        }
+
+        &-wrapper {
+          .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .swiper-slide {
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &_btn-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      position: relative;
+      outline: none;
+
+      .prev-btn {
+        position: relative;
+        width: 8rem;
+        height: 5rem;
+        outline: none;
+
+        &:nth-of-type(1) {
+          transform: scaleX(-1);
+        }
+
+        &:hover > .prev-btn_circle {
+          background: $hover-button-gradient;
+        }
+
+        &:active > .prev-btn_circle {
+          transform: scale(0.96);
+        }
+
+        &:nth-of-type(1) {
+          margin-right: 7rem;
+        }
+
+        &_circle {
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          background: $main-button-gradient;
+          box-shadow: 0 2px 2px $shadow-color;
+          transition: all 0.2s;
+        }
+
+        &_arrow {
+          position: absolute;
+          top: 2.1rem;
+          left: -2.3rem;
+          width: 5rem;
+          height: 1rem;
+          background-image: url(../media/illustrations/Arrowleft.svg);
+          background-image: 90%;
+          background-repeat: no-repeat;
+          background-position: right;
+        }
+      }
+    }
+  }
+}

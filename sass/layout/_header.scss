@@ -1,0 +1,434 @@
+@include lg {
+  .main-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $secondary-color;
+    padding: 3.5rem 0 0 0;
+
+    .main-header_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 67%;
+      max-width: 1300px;
+
+      @include hd {
+        width: 80%;
+      }
+
+      @include xxl {
+        width: 95%;
+      }
+
+      @include xl {
+        width: 90%;
+      }
+
+      .menu-icon {
+        display: none;
+      }
+
+      &-circles {
+        display: none;
+      }
+
+      &_logo {
+        font-family: $pt-font;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $text-color;
+        margin-right: 12rem;
+
+        @include xl {
+          margin-right: 5rem;
+          font-size: 1.4rem;
+        }
+
+        @include small-laptop {
+          margin-right: 5rem;
+          font-size: 1.4rem;
+        }
+
+        @include breakpoint(1070px) {
+          font-size: 1.2rem;
+          margin-right: 3rem;
+        }
+
+        @include lg {
+          text-align: center;
+        }
+      }
+
+      &_nav {
+        margin-right: 43px;
+        @include small-laptop {
+          margin-right: 2rem;
+        }
+
+        &-list {
+          font-size: 1.6rem;
+          list-style: none;
+          @include flexRow;
+          padding: 0;
+
+          @include xl {
+            margin-right: 2rem;
+            font-size: 1.4rem;
+          }
+
+          @include breakpoint(1070px) {
+            font-size: 1.2rem;
+          }
+
+          @include lg {
+            text-align: center;
+          }
+
+          &-items {
+            &:not(:last-child) {
+              margin-right: 3rem;
+
+              @include small-laptop {
+                margin-right: 2rem;
+              }
+            }
+
+            &:first-child {
+              margin-right: 0;
+            }
+
+            #for-who {
+              display: none;
+              margin-right: 0;
+            }
+            a {
+              text-decoration: none;
+              color: $text-color;
+              transition: color 0.3s;
+
+              &:focus {
+                outline: none;
+              }
+
+              &:hover {
+                color: $main-color;
+              }
+            }
+          }
+        }
+      }
+
+      &_lang {
+        font-size: 1.6rem;
+        color: $text-color;
+        margin-right: 4.3rem;
+
+        a,
+        a:visited,
+        a:active {
+          text-decoration: none;
+          color: $text-color;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $main-color;
+          }
+        }
+
+        @include xl {
+          margin-right: 2rem;
+          font-size: 1.4rem;
+        }
+
+        @include breakpoint(1070px) {
+          font-size: 1.2rem;
+        }
+      }
+
+      &_phone {
+        color: $text-color;
+        font-size: 2rem;
+        font-weight: 600;
+        @include flexRow;
+
+        @include xl {
+          font-size: 1.6rem;
+        }
+
+        @include small-laptop {
+          margin-right: 0.2;
+          font-size: 1.2rem;
+        }
+
+        img {
+          @include small-laptop {
+            width: 1.5rem;
+          }
+          display: inline-block;
+        }
+        p {
+          margin: 0 0 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  .main-header {
+    width: 100%;
+    height: 3.2rem;
+    background-color: $secondary-color;
+
+    .menu-icon.xcross span {
+      transform: scale(0);
+    }
+
+    .menu-icon.xcross::before {
+      top: 60%;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+
+    .menu-icon.xcross::after {
+      top: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+    }
+
+    .menu-icon {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      z-index: 99;
+      width: 18px;
+      height: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      @include ipad {
+        width: 28px;
+        height: 24px;
+        right: 34px;
+        top: 30px;
+      }
+
+      span,
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        height: 12%;
+        width: 100%;
+        background-color: $text-color;
+        transition: all 0.3s;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+
+      span {
+        top: 50%;
+        transform: scale(1) translate(0, -50%);
+      }
+    }
+    .mover {
+      transform: translate(0, 0);
+    }
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $prime-gradient;
+      z-index: 90;
+      transform: translate(100%, 0);
+      transition: all 0.6s ease-in;
+
+      &-circles {
+        .circle1,
+        .circle2,
+        .circle3 {
+          border-radius: 50%;
+          position: absolute;
+          z-index: -1;
+        }
+
+        .circle1 {
+          width: 7.2rem;
+          height: 7.2rem;
+          border: 3px solid $secondary-color-transparent;
+          right: 0.3rem;
+          bottom: 4rem;
+        }
+
+        .circle2 {
+          width: 3.7rem;
+          height: 3.7rem;
+          background-color: $secondary-color-transparent;
+          right: 8.6rem;
+          bottom: 6.2rem;
+        }
+
+        .circle3 {
+          width: 6rem;
+          height: 6rem;
+          background-color: $secondary-color-transparent;
+          right: 6.6rem;
+          bottom: -2rem;
+        }
+      }
+
+      &_logo {
+        p {
+          position: relative;
+          font-size: 1.6rem;
+          font-family: $pt-font;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin: 3.1rem 0 6.2rem 0;
+
+          &::after {
+            content: "Астролог, организатор и преподаватель Школы Астрологии Шестопалова";
+            position: absolute;
+            left: 0;
+            text-align: center;
+            width: 25rem;
+            text-transform: none;
+            top: 2.2rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            font-size: 1.3rem;
+            font-weight: 400;
+
+            @include ipad {
+              top: 5rem;
+              font-size: 1.8rem;
+              width: 35rem;
+            }
+          }
+        }
+
+        .ua-version {
+          position: relative;
+          font-size: 1.6rem;
+          font-family: $pt-font;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin: 3.1rem 0 6.2rem 0;
+
+          &::after {
+            content: "Астролог, організатор та викладач Школи Астрології Шестопалова";
+            position: absolute;
+            left: 0;
+            text-align: center;
+            width: 25rem;
+            text-transform: none;
+            top: 2.2rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            font-size: 1.3rem;
+            font-weight: 400;
+
+            @include ipad {
+              top: 5rem;
+              font-size: 1.8rem;
+              width: 35rem;
+            }
+          }
+
+          @include ipad {
+            font-size: 3.6rem;
+            margin: 8rem 0;
+          }
+        }
+      }
+
+      &_nav {
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          list-style: none;
+          font-size: 1.6rem;
+
+          @include ipad {
+            font-size: 2.6rem;
+          }
+
+          li {
+            margin-bottom: 3rem;
+
+            a,
+            a:active,
+            a:visited {
+              color: $text-color;
+              text-decoration: none;
+              transition: all 0.3s;
+
+              &:focus {
+                outline: none;
+              }
+
+              &:hover {
+                color: $main-color;
+              }
+            }
+          }
+        }
+      }
+
+      &_lang {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+
+        a,
+        a:visited,
+        a:active {
+          text-decoration: none;
+          color: $text-color;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $main-color;
+          }
+        }
+
+        @include ipad {
+          font-size: 2.6rem;
+        }
+      }
+
+      &_phone {
+        display: flex;
+        align-items: center;
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin-top: 4rem;
+
+        @include ipad {
+          font-size: 2.6rem;
+        }
+
+        img {
+          margin-right: 0.8rem;
+        }
+      }
+    }
+  }
+}

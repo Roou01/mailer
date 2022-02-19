@@ -1,0 +1,210 @@
+@include lg {
+  .send-data {
+    @include flexColumn;
+    width: 65rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    background-color: $form-background-color;
+    border-radius: 30px;
+    padding: 3rem 0;
+
+    .send-data-close-btn {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+    }
+
+    .user-data {
+      margin-bottom: 2.5rem;
+    }
+
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border: 0;
+      margin-bottom: 1rem;
+
+      p {
+        margin-bottom: 2rem;
+      }
+
+      input {
+        border: solid 2px $form-input-color;
+        border-radius: 15px;
+        background-color: $form-input-color;
+        padding: 1.5rem 1rem;
+        transition: all 0.3s;
+
+        &:focus {
+          outline: none;
+          border: solid 2px $main-color;
+        }
+      }
+
+      .send-input {
+        width: 62%;
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .user-date {
+        margin-bottom: 1.5rem;
+      }
+
+      .partner-date {
+        margin-bottom: 1.5rem;
+
+        &-input {
+          margin-bottom: 2rem;
+        }
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 2rem;
+      }
+
+      .user-date > input,
+      .partner-date > input {
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+          width: 10rem;
+        }
+      }
+    }
+  }
+}
+
+.invisible {
+  display: none;
+  visibility: hidden;
+}
+
+@include xs {
+  .send-data-mobile {
+    @include flexColumn;
+    width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    background-color: $form-background-color;
+    border-radius: 30px;
+    padding: 3rem 0;
+
+    @include ipad {
+      width: 80%;
+      padding: 6rem 0;
+    }
+
+    .send-data-close-btn {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+
+      @include ipad {
+        font-size: 3rem;
+      }
+    }
+
+    .user-data {
+      margin-bottom: 2.5rem;
+    }
+
+    fieldset {
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border: 0;
+      margin-bottom: 1rem;
+
+      .user-data__text {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin: 1rem 0;
+
+        @include ipad {
+          font-size: 1.8rem;
+        }
+      }
+
+      p {
+        margin-bottom: 2rem;
+      }
+
+      input {
+        border: solid 2px $form-input-color;
+        border-radius: 15px;
+        background-color: $form-input-color;
+        padding: 1.5rem 1rem;
+        transition: all 0.3s;
+
+        @include ipad {
+          font-size: 2rem;
+        }
+
+        &:focus {
+          outline: none;
+          border: solid 2px $main-color;
+        }
+      }
+
+      textarea {
+        background-color: $form-input-color;
+        padding: 2rem 1rem;
+        border-radius: 10px;
+        border: solid 2px $form-input-color;
+        width: 100%;
+        transition: border 0.4s;
+        font-family: inherit;
+        resize: none;
+
+        @include ipad {
+          font-size: 2rem;
+        }
+
+        &:focus {
+          outline: none;
+          border: solid 2px $main-color;
+        }
+      }
+
+      .send-input {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 2rem;
+      }
+    }
+  }
+}
